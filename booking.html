@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Booking</title>
+
+    <link rel="stylesheet" href="tourist.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+</head>
+<style>
+	.logo
+{
+	width:100%;
+	background-color:greenyellow;
+}
+</style>
+
+<body>
+	<div class="logo">                               
+		<div>
+			<table>
+				<tr>
+					<td width="600px" style="font-size:50px;font-family:times new roman;"> <font color="forestgreen"><b>VacationHut</b></font><font color="forestgreen"></font> </td>
+					<td> <br> <br> <br>
+
+						<h4> 
+							<div class="navbar">
+  								<a href="index.html"><font color="forestgreen">Home</font></a>
+  								<a href="aboutus.html"><font color="forestgreen">Services</a>
+  								<div class="dropdown">
+    								<button class="dropbtn"><font color="forestgreen"><b>Places</b></font>
+      									<i class="fa fa-caret-down"></i>
+    								</button>
+    								<div class="dropdown-content">
+										<a href="india.html">India</a>
+										<a href="usa.html">United States</a>
+										<a href="italy.html">Italy</a>
+										<a href="uk.html">United Kingdom</a>
+      
+									</div>
+								  </div>
+								  <a href="https://formsubmit.co/el/hiyuvo"><font color="forestgreen">Contact Us</font></a>
+								  <a href="booking.html"><font color="forestgreen">Booking</font></a>
+							</div>
+						</h4>
+						
+					
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<br>
+<br>
+
+<section>
+<div class="col-md-5">
+    <div class="right-content">
+      <div class="top-content">
+        <td width="600px" style="font-size:50px;font-family:times new roman;"> <font color="forestgreen"><b><h1><center>MAKE YOUR BOOKING AND PACK YOUR BAGS NOW...!!!</center></h1></b></font><font color="forestgreen"></font> </td>
+      </div>
+      <br>
+ 	<br>
+
+      
+	 	
+<form name="google-sheet" method="POST">
+	<h3>
+	<div class="inputbox">
+		
+		Enter Name<input type="text" name="tourist name" placeholder="name" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Enter Email<input type="email" name="email" placeholder="email" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Tourist Spot<input type="text" name="tourist spot" placeholder="tourist-spot" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Mobile Number<input type="text" name="mob number" placeholder="mobile number" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Number Of Tourists<input type="number" name="number of tourist" placeholder="number of members" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Journey Starts From<input type="date" name="Journey starting" required="">
+	</div>
+	<br>
+	<div class="inputbox">
+		
+		Journey Ends<input type="date" name="Journey ending" required="">
+	</div>
+	<br>
+	<br>
+	<input type="submit" class="btn" value="Book Now">
+	<br>
+	<br>
+</h3>
+</form>
+
+</section>
+<!-- code for footer -->
+<table width="1499px" height="10px" bgcolor="greenyellow" style="margin-bottom: 10px;">	
+				
+	<tr height="20px"></tr>
+	<tr height="20px">	
+			
+		<td width="300px" style="padding-left:30px"><font color="forestgreen" font size="5"><b> VacationHut </b></font> 
+		</td>	
+	</tr>
+	
+	<tr height="10px"></tr>
+
+	<tr height="30px">	
+				<td style="padding-bottom:20px; padding-left:30px"><font size="4" font color="forestgreen">
+					sometimes,a break <br> 
+					from your routine <br>
+					is the all you need !
+					</font> 
+				</td>
+				<td style="text-align: center;">
+					<font color="forestgreen">
+						Copyright ©2022 All rights reserved |
+
+
+					</font>
+				</td>	
+			<td style="text-align: center;">	<a href="https://www.instagram.com/"><img id="foot" src="insta.jpg"></a>
+				<a href="https://www.facebook.com/"><img id="foot" src="facebook.png"></a>
+				<a href="https://twitter.com/"><img id="foot" src="twitter.jpg"></a>
+					
+			</td>
+			
+			<tr height="10px"> 
+			</tr> 
+</table>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzaTV0r8EBhRrZgrqXi__WW66PSpO1Bcf84fRSJ2mAq0uVyLi8M_akCAXbzatdh_vQ/exec' 
+ const form = document.forms['google-sheet'] 
+  
+ form.addEventListener('submit', e => { 
+   e.preventDefault() 
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)}) 
+     .then(response => console.log('Success!',response())) 
+     .catch(error => console.error('Error!', error.message)) 
+     window.alert("Thanks for your query we will respond ASAP!!!"); 
+ })
+</script>
+</body>
+</html>
